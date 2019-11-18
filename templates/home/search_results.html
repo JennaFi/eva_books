@@ -1,0 +1,43 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container container-main" style="position: relative">
+  <div class="container-fluid padding">
+    <table class="table table-striped">
+<br>
+        <tbody>
+          {% for item in search_results %}
+
+           <tr>
+            {% if item.title %}
+
+               <td><a class="link_custom" href="/books/{{ item.slug }}">{{item.title}}</a></td>
+
+               {% elif item.name %}
+
+
+              <td><a class="link_custom" href="/authors/{{ item.slug }}">{{item.name}}, {{item.second_name}}</a></td>
+               {% endif %}
+            </tr>
+               {% empty %}
+
+            <div style="display: table; margin: 0 auto;">
+                        Nothing found, please try again!
+
+            </div>
+            <div style="display: table; margin: 0 auto;">
+               <br><br><img src="/static/img/lisa.jpg" style="width:500px;">
+            </div>
+
+
+          {% endfor %}
+
+        </tbody>
+
+    </table>
+  </div>
+
+</div>
+
+{% endblock %}

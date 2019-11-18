@@ -1,0 +1,24 @@
+{% extends "basic.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container container-main"
+     style="background-image: url('/static/img/photo-1492052722242-2554d0e99e3a.jpg'); background-size: cover">
+<br>
+    <div style="display: table; margin: 0 auto;">
+        <p class="title" style="font-size: 80px; color: #2788ea">
+                Your review successfully added!Thank you!
+        </p>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+          <a href="/books/{{book.slug}}"><button class="btn btn-success btn-lg" type="button">Watch</button></a>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "basic.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+   <div class="container container-main">
+     <p class="title">
+       <span class="book_title">{{author.name}}</span>  by  <span class="book_author">{{ author.second_name }}, </span>
+       <span class="book_year">{{author.date_of_birth}} - {{author.date_of_death}}</span>
+     </p>
+
+   <div class="container-fluid">
+     <img src="/media/{{author.image}}" class="book_img_big">
+     <div class="container_my_review">
+      {{author.about|safe}}
+     <br>
+     </div>
+   </div>
+
+   <table class="table table-striped">
+<br>
+        <tbody>
+          {% for book in books %}
+
+           <tr>
+
+
+           <td><a class="link_custom" href="/books/{{book.slug}}">{{book.title}}</a></td>
+
+
+
+           </tr>
+
+          {% endfor %}
+
+        </tbody>
+
+  </table>
+   </div>
+
+{% endblock %}

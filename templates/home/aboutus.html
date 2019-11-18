@@ -1,0 +1,37 @@
+{% extends "basic.html" %}
+{% load static %}
+
+
+<script>
+$(".card_on_hover").hover(
+    function () { $(this).addClass("hovered"); } ,
+    function () { $(this).removeClass("hovered"); }
+);
+</script>
+
+{% block content %}
+
+<div class="container container-main" style="position: relative">
+
+  <div class="container-fluid padding">
+    <div class="row padding">
+    {% for b in books %}
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+
+
+            <div class="card_book">
+              <a href="/books/{{ b.slug }}"><img src="{{ b.image.url }}" style="width:200px; height:315px;"></a>
+            </div>
+        <br>
+
+        <br>
+      </div>
+    <br>
+    <br>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

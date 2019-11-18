@@ -1,0 +1,132 @@
+{% load static %}
+
+<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon.png">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <meta name="author" content="Eva">
+  <meta name="keywords" content="books, review, literature"/>
+  <meta name="description" content="Eva World"/>
+  <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+           crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/b298817632.js"></script>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+  </script>
+
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+  </script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+  {% block title %}<title>Eva Books</title>{% endblock %}
+
+  <link rel="stylesheet" type="text/css" href="{% static "/css/eva_books_styles.css" %}">
+
+</head>
+
+
+<body style="background-image: url(/static/img/af9a1567-d49b-4800-883e-f1d0693f569d.JPG)">
+  <div class="container container-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #c3c1ba">
+      <a class="navbar-brand" href="/"><span class="handwriting_title">Eva`s Books</span></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/aboutus">About Eva's Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/books">All Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/authors">Authors</a>
+          </li>
+          <li class="nav-item">
+
+            {% if request.user.is_authenticated %}
+            <a class="nav-link" href="/books/logout"><i class="fas fa-sign-out-alt"></i>Log out</a>
+            {% else %}
+            <a class="nav-link" href="/books/login"><i class="fas fa-sign-in-alt"></i>Log in</a>
+            {% endif %}
+
+          </li>
+        </ul>
+        <form autocomplete="off" class="form-inline my-2 my-lg-0" method="get" action="/search">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="q">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+
+    <div container-fluid>
+
+
+    {% block slider%}
+     {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <div class="container container-footer">
+      <footer class="footer mt-auto py-3" style="background-color: #c3c1ba">
+
+        <div class="row padding text-center">
+
+          <div class="col-12">
+            <h4><p>How to reach us</p></h4>
+            <span>Spain, Valencia, Valencia, Calle Pie de la Cruz, 16</span>
+          </div>
+          <div class="col-12 social padding">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+
+        </div>
+        <div class="container">
+          <p class="m-0 text-center">Copyright &copy; Eva's Books {% now 'Y' %}</p>
+        </div>
+
+      </footer>
+    </div>
+
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+          integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+          crossorigin="anonymous"></script>
+</body>
+</html>

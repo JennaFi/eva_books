@@ -1,0 +1,54 @@
+{% extends "basic.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container container-main" style="background-image: url('/static/img/girlwhite.jpg');
+  background-size: cover">
+  <div class user_login>
+    <div class="container d-flex h-100">
+      <div class="row justify-content-left text-center">
+        <div class="col-10">
+
+          <form method="post">
+          <br><br>
+            <h2 class="form-signing-heading title" style='font-size: 60px; color: #2788ea'><strong>Welcome!
+            <br>   please, Login</strong></h2>
+
+             {% csrf_token %}
+             {{ form|crispy }}
+
+              <div class="clearfix">
+                <label class="pull-left checkbox-inline"><input type="checkbox" style="width: 20px; height: 20px;" class="form-check-input"/>
+              <medium> <strong>Remember Me</strong></medium>
+              </label>
+
+              </div>
+
+              <input type="hidden" name="next" value="/books/"/>
+
+             <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+          </form>
+
+        </div>
+      {% if messages %}
+
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="{{message.tags}}">
+                    {{message|safe}}
+                        <a href="#" class="close">X</a>
+                </li>
+                {% endfor %}
+            </ul>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,418 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+body {
+    background-color: #dfdcd5;
+    background-image: url('/static/img/af9a1567-d49b-4800-883e-f1d0693f569d.JPG');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateY (30%);
+
+
+
+}
+.container-navbar {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 30%;
+}
+
+.container-main {
+    background-color: white;
+    padding: 10px;
+    margin-left: 30%;
+    margin-top: 0px;
+    min-height: 100vh;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+
+
+.carousel_fade {
+        position: relative;
+        display:block!important;
+}
+
+#carousel-item {
+        display:block!important;
+}
+
+.carousel-caption {
+        display: block!important;
+        text-center;
+        position: relative;
+        top: 20%;
+        bottom: initial;
+        transform: translateY (-50%);
+
+}
+
+.carousel-inner img {
+        width: 850px;
+        display: block;
+        transform: translateY (-80%);
+        width: 100%;
+        height: 100%;
+
+
+}
+
+.container-footer {
+    top: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 30%;
+
+}
+
+.handwriting_title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 55px;
+    padding-left: 15px;
+    padding-right: 20px;
+
+}
+
+
+.link_custom {
+    color: black;
+    text-decoration: none;
+
+}
+a.link_custom {
+    text-decoration: none;
+}
+.link_custom: hover {
+    text-decoration: none;
+    color: black;
+
+}
+
+.book_img_big {
+    max-width: 300px;
+    min-height: 20vh;
+    border: 5px #dfdcd5 solid;
+    float: left;
+    padding: 5px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+
+}
+
+.book_title {
+    font-family: 'Dancing Script', cursive;
+    color: #7d3764;
+    font-size: 55px;
+    font-weight: 600;
+    margin-right: 15px;
+
+}
+
+.book_author {
+    font-family: 'Dancing Script', cursive;
+    color: #393d85;
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+}
+
+.book_year {
+    font-family: 'Dancing Script', cursive;
+    color: #441575;
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 35px;
+
+}
+
+
+.star {
+    margin-left: 15px;
+    width: 25px;
+    margin-right: 10px;
+    display: inline-block;
+
+}
+
+.container_my_review {
+    margin-top: 0px;
+    min-height: 400px;
+
+}
+
+.container_for_reviews {
+    height: auto;
+    padding: 25px;
+    background-color: #dfdcd5;
+    overflow: auto;
+
+}
+
+.one_review {
+    width: 80%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #c3c1ba;
+    border: 3px dashed #393d85;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+}
+
+
+.r_title {
+   color: blue;
+   font-weight: 600;
+   font-family: 'Dancing Script', cursive;
+
+}
+
+.r_user {
+    font: solid;
+    font-weight: 600;
+    color: blue;
+}
+
+
+.button {
+    margin-bottom: 150px;
+
+}
+
+
+
+
+user_login {
+
+    color: blue;
+    margin-bottom: 5px;
+
+}
+#fullscreen {!important
+
+    background-size: cover;
+    position: relative;
+
+ }
+
+
+
+#card {
+        padding: 0px;
+        border-radius: 0;
+        width: 70%;
+        margin: 0px 0px ;
+        margin-top: 20px;
+}
+
+#row padding {
+          padding: 0px 15px;
+          border-radius: 1;
+          width: 70%;
+          margin: 0px 0px 30px;
+          margin-top: 20px;
+
+
+ }
+
+.b_title {
+   color: black;
+   font-size 40px;
+   font-family: ;
+}
+
+.card-text {
+
+}
+
+.book_title {
+    font-family: 'Dancing Script', cursive;
+    color: #7d3764;
+    font-size: 55px;
+    font-weight: 600;
+    margin-right: 15px;
+
+}
+
+.book_author {
+    font-family: 'Dancing Script', cursive;
+    color: #393d85;
+    font-size: 55px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: 15px;
+
+
+}
+
+.book_year {
+    font-family: 'Dancing Script', cursive;
+    color: #441575;
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.title {
+    margin-top: 10px;
+    margin-bottom:10px;
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 35px;
+
+}
+
+
+.star {
+    margin-left: 25px;
+    width: 25px;
+    margin-right: 15px;
+    display: inline-block;
+
+}
+
+.container_my_review {
+    margin-top: 0px;
+    min-height: 400px;
+
+}
+
+.container_for_reviews {
+    height: auto;
+    padding: 25px;
+    background-color: #dfdcd5;
+    overflow: auto;
+
+}
+
+.one_review {
+    width: 80%;
+    height:  fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #c3c1ba;
+    border: 3px dashed #393d85;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+}
+
+
+.r_title {
+   color: blue;
+   font-weight: 600;
+   font-family: 'Dancing Script', cursive;
+
+}
+
+.r_user {
+    font: solid;
+    font-weight: 600;
+    color: blue;
+}
+
+
+.button {
+    margin-bottom: 150px;
+
+}
+
+#card-deck {
+        padding: 0px 15px;
+        border-radius: 15px;
+        width: 70%;
+        margin: 0px 0px 15px;
+        margin-top: 20px;
+
+}
+
+.stars-container {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+}
+
+.stars-container:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
+  color: lightgray;
+}
+
+.stars-container:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
+  color: gold;
+  overflow: hidden;
+}
+
+.stars-0:after { width: 0%; }
+.stars-10:after { width: 10%; }
+.stars-20:after { width: 20%; }
+.stars-30:after { width: 30%; }
+.stars-40:after { width: 40%; }
+.stars-50:after { width: 50%; }
+.stars-60:after { width: 60%; }
+.stars-70:after { width: 70%; }
+.stars-80:after { width: 80%; }
+.stars-90:after { width: 90%; }
+.stars-100:after { width: 100; }
+
+.card_on_hover .card_hover {
+    display: none;
+}
+.card_on_hover.hovered .card_hover {
+   display: inherit;
+    }
+.card_on_hover.hovered .card_book {
+     display: none;
+
+    }
+
+@media (max-width: 500px) {
+    .container-navbar {
+        margin-left: 0px;
+}
+
+.container-main {
+
+    margin-left: 0px;
+
+
+}
+.container-footer {
+
+    margin-left: 0px;
+
+}
+
+        }
+
+
+@media (max-width: 550px) {
+         .carousel-inner img {
+         width: auto;
+         height: auto;
+            }
+}

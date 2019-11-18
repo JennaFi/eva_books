@@ -1,0 +1,61 @@
+
+
+            <span class="title">Your review</span>
+
+
+
+                 {{ form.title|as_crispy_field }}
+                 {{ form.text|as_crispy_field }}
+
+            <button type="Submit button" value="Submit" style="margin-top:10px; margin-bottom:65px;"
+                class="btn btn-outline-secondary">Post your review</button>
+            </form>
+
+
+
+
+
+<div class="modal fade" id="modalReviewForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <form enctype="multipart/form-data" action='' method='POST'>
+
+        <h4 class="modal-title w-100 font-weight-bold">Write your Review</h4>
+            {% csrf_token %}
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            {{ form.rating|as_crispy_field }}
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form32" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Your title</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Your title</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Your review</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
+     data-target="#modalReviewForm">Write your Review</a>
+</div>
